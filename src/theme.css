@@ -1,0 +1,21 @@
+/*All fonts links*/
+@font-face {
+  font-family: regular;
+  src: url(./assets/fonts/Inter-Regular.otf);
+}
+@font-face {
+  font-family: medium;
+  src: url(./assets/fonts/Inter-Medium.otf);
+}
+@font-face {
+  font-family: semibold;
+  src: url(./assets/fonts/Inter-SemiBold.otf);
+}
+@font-face {
+  font-family: bold;
+  src: url(./assets/fonts/Inter-Bold.otf);
+}
+@font-face {
+  font-family: extrabold;
+  src: url(./assets/fonts/Inter-ExtraBold.otf);
+}
