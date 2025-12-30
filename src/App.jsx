@@ -1,11 +1,9 @@
+import Topbar from "./Components/Topbar";
 
-import './style.css'
 const App = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <>
+  <Topbar/>
+  </>;
+};
 
-export default App
+export default App;

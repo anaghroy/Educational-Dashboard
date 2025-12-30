@@ -1,0 +1,156 @@
+/* Abstracts */
+@use "./abstracts/variables" as va;
+@use "./abstracts/typography" as ty;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background: va.$primary-bg;
+}
+// .dashboard {
+//   background: va.$bg;
+//   color: va.$text;
+// }
+/*Top-bar section*/
+.main-top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  .image {
+    width: 5%;
+    // background-color: red;
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  .center {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    // background-color: green;
+    .search-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: va.$primary-bg;
+      padding: 0.6rem 1rem;
+      border-radius: 50px;
+      width: 40%;
+      border: 0.1rem solid #9c9999;
+      .search-icon {
+        color: #888;
+      }
+
+      input {
+        border: none;
+        outline: none;
+        background: transparent;
+        width: 100%;
+        font-size: 0.95rem;
+        color: #333;
+
+        &::placeholder {
+          color: #aaa;
+        }
+      }
+    }
+    .button {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      width: fit-content;
+      background: va.$primary-button-bg;
+      border-radius: 50px;
+      padding: 0.6rem 1rem;
+      cursor: pointer;
+      a {
+        text-decoration: none;
+        color: va.$primary-button-text-color;
+      }
+    }
+    .more {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background: va.$secondary-button-bg;
+    }
+  }
+  .right {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    cursor: pointer;
+    .light {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background: va.$primary-button-bg;
+    }
+    .dark {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background: va.$primary-button-bg;
+      
+    }
+    .button {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      width: fit-content;
+      background: va.$primary-button-bg;
+      border-radius: 50px;
+      padding: 0.6rem 1rem;
+      cursor: pointer;
+      a {
+        text-decoration: none;
+        color: va.$primary-button-text-color;
+      }
+    }
+  }
+}
+
+/*Global styling*/
+.button-2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  background: va.$secondary-button-bg;
+  border-radius: 50px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  a {
+    text-decoration: none;
+    color: va.$secondary-button-text;
+  }
+}

@@ -1,0 +1,175 @@
+/* Abstracts */
+/*All fonts links*/
+@font-face {
+  font-family: regular;
+  src: url(./assets/fonts/Inter-Regular.otf);
+}
+@font-face {
+  font-family: medium;
+  src: url(./assets/fonts/Inter-Medium.otf);
+}
+@font-face {
+  font-family: semibold;
+  src: url(./assets/fonts/Inter-SemiBold.otf);
+}
+@font-face {
+  font-family: bold;
+  src: url(./assets/fonts/Inter-Bold.otf);
+}
+@font-face {
+  font-family: extrabold;
+  src: url(./assets/fonts/Inter-ExtraBold.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #F4F1EB;
+}
+
+/*Top-bar section*/
+.main-top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+.main-top .image {
+  width: 5%;
+}
+.main-top .image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.main-top .center {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+}
+.main-top .center .search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #F4F1EB;
+  padding: 0.6rem 1rem;
+  border-radius: 50px;
+  width: 40%;
+  border: 0.1rem solid #9c9999;
+}
+.main-top .center .search-bar .search-icon {
+  color: #888;
+}
+.main-top .center .search-bar input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 0.95rem;
+  color: #333;
+}
+.main-top .center .search-bar input::-moz-placeholder {
+  color: #aaa;
+}
+.main-top .center .search-bar input::placeholder {
+  color: #aaa;
+}
+.main-top .center .button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #22262B;
+  border-radius: 50px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+}
+.main-top .center .button a {
+  text-decoration: none;
+  color: #FCCB26;
+}
+.main-top .center .more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #FFFFFF;
+}
+.main-top .right {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+}
+.main-top .right .light {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #22262B;
+}
+.main-top .right .dark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #22262B;
+}
+.main-top .right .button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #22262B;
+  border-radius: 50px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+}
+.main-top .right .button a {
+  text-decoration: none;
+  color: #FCCB26;
+}
+
+/*Global styling*/
+.button-2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #FFFFFF;
+  border-radius: 50px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+}
+.button-2 a {
+  text-decoration: none;
+  color: #939393;
+}/*# sourceMappingURL=main.css.map */
