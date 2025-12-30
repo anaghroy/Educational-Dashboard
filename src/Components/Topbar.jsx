@@ -46,10 +46,10 @@ const Topbar = () => {
       </div>
       <div className="right">
         <div className="light">
-          <Sun color="#FCCB26" />
+          <Sun />
         </div>
         <div className="dark">
-          <Moon color="#FFFFFF" />
+          <Moon />
         </div>
         <div className="button">
           <CircleFadingArrowUp color="#FCCB26" />
