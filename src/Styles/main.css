@@ -24,7 +24,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: regular, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 html,
@@ -182,7 +182,7 @@ body {
   height: calc(100vh - 80px);
   background: #f7f5ef;
   border-radius: 30px;
-  margin: 1.5rem;
+  margin: 1.5rem 0 1.5rem 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -251,6 +251,300 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.main-layout {
+  display: flex;
+  gap: 1.5rem;
+  background-color: greenyellow;
+  /* Header */
+  /* Grid layout */
+  /* Common card */
+  /* Grid sizes (matching screenshot) */
+}
+.main-layout .dashboard {
+  flex: 1;
+  background: #f7f5ef;
+  border-radius: 30px;
+  padding: 2rem;
+  margin: 1.5rem 1.5rem 1.5rem 0;
+  overflow-y: auto;
+}
+.main-layout .dashboard-header {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.main-layout .dashboard-header h2 {
+  font-size: 1.6rem;
+}
+.main-layout .dashboard-header p {
+  color: #939393;
+  margin-top: 0.3rem;
+}
+.main-layout .large-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-layout .dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+}
+.main-layout .card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+.main-layout .large {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  grid-column: span 8;
+  height: 280px;
+}
+.main-layout .large .button-header {
+  display: flex;
+  flex-direction: row;
+  width: 35%;
+  gap: 0.5rem;
+}
+.main-layout .large .menu-item {
+  width: 50%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FCCB26;
+  color: #111;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.main-layout .large .menu-item:hover {
+  background: #ece9e2;
+  color: #111;
+}
+.main-layout .large .menu-item.active {
+  background: #22262B;
+  color: #FCCB26;
+}
+.main-layout .large .design {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  width: 100%;
+  background-color: #f5f1ee;
+  padding: 1rem;
+  border-radius: 20px;
+}
+.main-layout .large .design .image {
+  width: 20%;
+}
+.main-layout .large .design .image img {
+  width: 100%;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.main-layout .large .design .text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 50%;
+}
+.main-layout .large .design .text p {
+  font-family: "Inter-ExtraBold", sans-serif;
+  font-size: 1.2rem;
+}
+.main-layout .large .design .time {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-layout .large .design .time .play-card {
+  width: 100%;
+  /* RIGHT */
+}
+.main-layout .large .design .time .play-card .play-wave {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  flex: 1;
+  margin: 0 1.9rem;
+}
+.main-layout .large .design .time .play-card .play-wave span {
+  width: 4px;
+  height: 8px;
+  background: #111;
+  border-radius: 4px;
+  opacity: 0.3;
+}
+.main-layout .large .design .time .play-card .play-wave span:nth-child(3),
+.main-layout .large .design .time .play-card .play-wave span:nth-child(6) {
+  height: 18px;
+  opacity: 1;
+}
+.main-layout .large .design .time .play-card .play-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+.main-layout .large .design .time .play-card .time {
+  font-size: 1rem;
+  color: #555;
+}
+.main-layout .large .design .time .play-card .play-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #111;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+@keyframes wave {
+  0% {
+    height: 6px;
+  }
+  50% {
+    height: 18px;
+  }
+  100% {
+    height: 6px;
+  }
+}
+.main-layout .large .design .time .play-card .play-wave span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.main-layout .large .design .time .play-card .play-wave span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.main-layout .large .design .time .play-card .play-wave span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.main-layout .calendar {
+  grid-column: span 4;
+  height: 280px;
+  /* Header */
+  /* Days Row */
+  /* Event */
+}
+.main-layout .calendar .calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+.main-layout .calendar .calendar-header h4 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.main-layout .calendar .calendar-nav {
+  display: flex;
+  gap: 0.4rem;
+}
+.main-layout .calendar .calendar-nav button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  background: #fff;
+  cursor: pointer;
+}
+.main-layout .calendar .calendar-days {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+}
+.main-layout .calendar .day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+.main-layout .calendar .day span {
+  font-size: 0.7rem;
+  color: #999;
+}
+.main-layout .calendar .day .date {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f3f1ea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+.main-layout .calendar .day.active .date {
+  background: #facc15;
+  color: #111;
+  font-weight: 600;
+}
+.main-layout .calendar .calendar-event {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f5ef;
+  border-radius: 16px;
+  padding: 0.9rem;
+}
+.main-layout .calendar .event-left {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+.main-layout .calendar .event-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: #111;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-layout .calendar .event-info h5 {
+  font-size: 0.85rem;
+}
+.main-layout .calendar .event-info p {
+  font-size: 0.7rem;
+  color: #777;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.main-layout .calendar .dot {
+  width: 6px;
+  height: 6px;
+  background: #facc15;
+  border-radius: 50%;
+}
+.main-layout .calendar .event-more {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.main-layout .video {
+  grid-column: span 8;
+  height: 260px;
+}
+.main-layout .progress {
+  grid-column: span 4;
+  height: 120px;
+}
+.main-layout .tasks {
+  grid-column: span 4;
+  height: 200px;
 }
 
 /*Global styling*/
