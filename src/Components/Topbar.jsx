@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Logo from "../assets/images/Logo.png";
+import useDebounce from "../Data/useDebounce";
+
 import {
   CircleFadingArrowUp,
   DecimalsArrowRight,
@@ -12,17 +14,26 @@ import {
 } from "lucide-react";
 const data = [
   "UI/UX Design",
+  "UI Design",
   "Branding",
   "Front End",
+  "Back End",
   "Motion Design",
+  "Animation",
+  "WebGSAL",
   "Typography",
 ];
 const Topbar = () => {
   const [query, setQuery] = useState("");
 
-  const filteredData = data.filter((item) =>
-    item.toLowerCase().includes(query.toLowerCase())
-  );
+  const debouncedQuery = useDebounce(query, 300);
+  const filteredData = useMemo(() => {
+    if (!debouncedQuery) return [];
+    return data.filter((item) =>
+      item.toLowerCase().includes(debouncedQuery.toLowerCase())
+    );
+  }, [debouncedQuery]);
+
   return (
     <div className="main-top">
       <div className="image">
@@ -31,24 +42,24 @@ const Topbar = () => {
       <div className="center">
         <div className="search-wrapper">
           <div className="search-bar">
-          <input
-            type="text"
-            placeholder="Search anything..."
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-          />
-          <Search className="search-icon" size={18} />
-          {/* Show results only when typing */}
-          {query && (
-            <div className="results">
-              {filteredData.length > 0 ? (
-                filteredData.map((item, index) => <p key={index}>{item}</p>)
-              ) : (
-                <p className="no-result">No results found</p>
-              )}
-            </div>
-          )}
-        </div>
+            <input
+              type="text"
+              placeholder="Search anything..."
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
+            <Search className="search-icon" size={18} />
+            {/* Show results only when typing */}
+            {query && (
+              <div className="results">
+                {filteredData.length > 0 ? (
+                  filteredData.map((item, index) => <p key={index}>{item}</p>)
+                ) : (
+                  <p className="no-result">No results found</p>
+                )}
+              </div>
+            )}
+          </div>
         </div>
         <div className="button">
           <Spline color="#FCCB26" />

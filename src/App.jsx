@@ -7,7 +7,7 @@ import { data } from "./Data/ProgressData";
 const App = () => {
   return (
     <>
-      <Topbar />
+      <Topbar/>
       <div className="main-layout">
         <Sidebar />
         <Dashboard data={data} button={button}/>
