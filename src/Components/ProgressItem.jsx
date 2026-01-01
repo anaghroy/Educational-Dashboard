@@ -1,12 +1,11 @@
 import { Timer } from "lucide-react";
-import React from "react";
 
 const ProgressItem = ({ data }) => {
   console.log(data);
   return (
     <div className="main-progress">
       <div className="content">
-        <p>Tasks Board</p>
+        <span className="text">Tasks Board</span>
         <div className="button">in Progress</div>
       </div>
       {data.map((item, index) => (
