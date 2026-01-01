@@ -1,14 +1,15 @@
-
 import design from "../assets/images/Design ux.jpg";
 
 import PlayCard from "./PlayCard";
 import Calendar from "./Calendar";
-import Video from "./Video"
+import Video from "./Video";
 
 import ProgressItem from "./ProgressItem";
 import { data } from "../Data/ProgressData";
 import { button } from "../Data/ButtonCard";
 import { Plus } from "lucide-react";
+import Task from "./Task";
+import SecondTask from "./SecondTask";
 const Dashboard = () => {
   return (
     <section className="dashboard">
@@ -51,13 +52,18 @@ const Dashboard = () => {
         </div>
 
         <div className="card video">
-          <Video button={button}/>
+          <Video button={button} />
         </div>
 
         <div className="card progress">
           <ProgressItem data={data} />
         </div>
-        <div className="card tasks">Tasks Board</div>
+        <div className="card tasks">
+          <Task/>
+        </div>
+        <div className="card tasks-part-2">
+          <SecondTask/>
+        </div>
       </div>
     </section>
   );
