@@ -603,9 +603,16 @@ body {
         display: flex;
         flex-direction: row;
         gap: 1rem;
-        video {
-          width: 70%;
+
+        .video-con {
+          width: 100%;
+          position: relative;
           border-radius: 20px;
+          overflow: hidden;
+          video {
+            position: absolute;
+            width: 100%;
+          }
         }
         .center {
           display: flex;
@@ -703,16 +710,16 @@ body {
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      
+
       .content {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         .text {
-        font-size: 1.1rem;
-        font-family: ty.$extrabold;
-        font-weight: 600;
-      }
+          font-size: 1.1rem;
+          font-family: ty.$extrabold;
+          font-weight: 600;
+        }
         .button {
           background-color: #f5f1ee;
           border-radius: 50px;

@@ -604,9 +604,15 @@ body {
   flex-direction: row;
   gap: 1rem;
 }
-.main-layout .video .wapper .vido-container video {
-  width: 70%;
+.main-layout .video .wapper .vido-container .video-con {
+  width: 100%;
+  position: relative;
   border-radius: 20px;
+  overflow: hidden;
+}
+.main-layout .video .wapper .vido-container .video-con video {
+  position: absolute;
+  width: 100%;
 }
 .main-layout .video .wapper .vido-container .center {
   display: flex;

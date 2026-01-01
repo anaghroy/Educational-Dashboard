@@ -28,7 +28,9 @@ const Video = ({ button }) => {
           </div>
         </div>
         <div className="vido-container">
-          <video autoPlay loop muted src={designers}></video>
+          <div className="video-con">
+            <video autoPlay loop muted src={designers}></video>
+          </div>
           <div className="center">
             <span>Course 10</span>
             <div className="image-container">
