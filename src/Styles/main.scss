@@ -20,9 +20,6 @@ body {
 
 /*Top-bar section*/
 .main-top {
-  // position: sticky;
-  // top: 0;
-  // z-index: 100;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -45,29 +42,62 @@ body {
     gap: 0.5rem;
     align-items: center;
     // background-color: green;
-    .search-bar {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      background: va.$primary-bg;
-      padding: 0.6rem 1rem;
-      border-radius: 50px;
+    .search-wrapper {
+      position: relative;
       width: 40%;
-      border: 0.1rem solid #9c9999;
-      .search-icon {
-        color: #888;
-      }
-
-      input {
-        border: none;
-        outline: none;
-        background: transparent;
+      // background-color: red;
+      .search-bar {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        background: va.$primary-bg;
+        padding: 0.6rem 1rem;
+        border-radius: 50px;
         width: 100%;
-        font-size: 0.95rem;
-        color: #333;
+        border: 0.1rem solid #9c9999;
+        .search-icon {
+          color: #888;
+        }
+        input {
+          border: none;
+          outline: none;
+          background: transparent;
+          width: 100%;
+          font-size: 0.95rem;
+          color: #333;
 
-        &::placeholder {
-          color: #aaa;
+          &::placeholder {
+            color: #aaa;
+          }
+        }
+      }
+      /* Dropdown */
+      .results {
+        position: absolute;
+        top: calc(100% + 0.5rem);
+        left: 0;
+        width: 100%;
+        background: #fff;
+        border-radius: 16px;
+        padding: 0.5rem;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        z-index: 50;
+
+        p {
+          padding: 0.6rem 0.8rem;
+          border-radius: 10px;
+          cursor: pointer;
+          transition: 0.2s ease;
+
+          &:hover {
+            background: va.$secondary-button-bg;
+          }
+        }
+
+        .no-result {
+          text-align: center;
+          color: va.$sub-text;
+          font-size: 0.85rem;
         }
       }
     }
@@ -160,13 +190,14 @@ body {
 /*Side-bar section*/
 .sidebar {
   width: 80px;
-  height: calc(100vh - 80px); // below topbar
+  height: calc(131vh - 10px); // below topbar
   background: #f7f5ef;
   border-radius: 30px;
   margin: 1.5rem 0 1.5rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  justify-content: space-between;
+  // gap: 2rem;
   align-items: center;
 }
 
@@ -220,6 +251,7 @@ body {
   padding: 0.5rem;
   align-items: center;
   border-radius: 30px;
+  margin-bottom: 15%;
   .profile {
     width: 50px;
     height: 50px;
@@ -236,12 +268,12 @@ body {
 .main-layout {
   display: flex;
   gap: 1.5rem;
-  background-color: greenyellow;
+  // background-color: greenyellow;
   .dashboard {
     flex: 1;
     background: #f7f5ef;
     border-radius: 30px;
-    padding: 2rem;
+    // padding: 2rem;
     margin: 1.5rem 1.5rem 1.5rem 0;
     overflow-y: auto;
   }
@@ -326,6 +358,7 @@ body {
       display: flex;
       flex-direction: row;
       gap: 1rem;
+      /*First card section*/
       .design {
         display: flex;
         flex-direction: row;

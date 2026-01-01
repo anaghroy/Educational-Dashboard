@@ -64,20 +64,25 @@ body {
   gap: 0.5rem;
   align-items: center;
 }
-.main-top .center .search-bar {
+.main-top .center .search-wrapper {
+  position: relative;
+  width: 40%;
+  /* Dropdown */
+}
+.main-top .center .search-wrapper .search-bar {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   background: #F4F1EB;
   padding: 0.6rem 1rem;
   border-radius: 50px;
-  width: 40%;
+  width: 100%;
   border: 0.1rem solid #9c9999;
 }
-.main-top .center .search-bar .search-icon {
+.main-top .center .search-wrapper .search-bar .search-icon {
   color: #888;
 }
-.main-top .center .search-bar input {
+.main-top .center .search-wrapper .search-bar input {
   border: none;
   outline: none;
   background: transparent;
@@ -85,11 +90,36 @@ body {
   font-size: 0.95rem;
   color: #333;
 }
-.main-top .center .search-bar input::-moz-placeholder {
+.main-top .center .search-wrapper .search-bar input::-moz-placeholder {
   color: #aaa;
 }
-.main-top .center .search-bar input::placeholder {
+.main-top .center .search-wrapper .search-bar input::placeholder {
   color: #aaa;
+}
+.main-top .center .search-wrapper .results {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  padding: 0.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  z-index: 50;
+}
+.main-top .center .search-wrapper .results p {
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.main-top .center .search-wrapper .results p:hover {
+  background: #FFFFFF;
+}
+.main-top .center .search-wrapper .results .no-result {
+  text-align: center;
+  color: #939393;
+  font-size: 0.85rem;
 }
 .main-top .center .button {
   display: flex;
@@ -180,13 +210,13 @@ body {
 /*Side-bar section*/
 .sidebar {
   width: 80px;
-  height: calc(100vh - 80px);
+  height: calc(131vh - 10px);
   background: #f7f5ef;
   border-radius: 30px;
   margin: 1.5rem 0 1.5rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -240,6 +270,7 @@ body {
   padding: 0.5rem;
   align-items: center;
   border-radius: 30px;
+  margin-bottom: 15%;
 }
 .sidebar-bottom .profile {
   width: 50px;
@@ -257,7 +288,6 @@ body {
 .main-layout {
   display: flex;
   gap: 1.5rem;
-  background-color: greenyellow;
   /* Header */
   /* Grid layout */
   /* Common card */
@@ -271,7 +301,6 @@ body {
   flex: 1;
   background: #f7f5ef;
   border-radius: 30px;
-  padding: 2rem;
   margin: 1.5rem 1.5rem 1.5rem 0;
   overflow-y: auto;
 }
@@ -344,6 +373,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  /*First card section*/
 }
 .main-layout .large .container .design {
   display: flex;

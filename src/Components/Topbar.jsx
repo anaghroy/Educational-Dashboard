@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Logo from "../assets/images/Logo.png";
 import {
-  CircleChevronRight,
   CircleFadingArrowUp,
   DecimalsArrowRight,
   Moon,
@@ -11,22 +10,45 @@ import {
   Type,
   UserRound,
 } from "lucide-react";
+const data = [
+  "UI/UX Design",
+  "Branding",
+  "Front End",
+  "Motion Design",
+  "Typography",
+];
 const Topbar = () => {
   const [query, setQuery] = useState("");
+
+  const filteredData = data.filter((item) =>
+    item.toLowerCase().includes(query.toLowerCase())
+  );
   return (
     <div className="main-top">
       <div className="image">
         <img src={Logo} alt="logo" />
       </div>
       <div className="center">
-        <div className="search-bar">
+        <div className="search-wrapper">
+          <div className="search-bar">
           <input
             type="text"
             placeholder="Search anything..."
-            // value={value}
-            // onChange={(e) => onChange(e.target.value)}
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
           />
           <Search className="search-icon" size={18} />
+          {/* Show results only when typing */}
+          {query && (
+            <div className="results">
+              {filteredData.length > 0 ? (
+                filteredData.map((item, index) => <p key={index}>{item}</p>)
+              ) : (
+                <p className="no-result">No results found</p>
+              )}
+            </div>
+          )}
+        </div>
         </div>
         <div className="button">
           <Spline color="#FCCB26" />
