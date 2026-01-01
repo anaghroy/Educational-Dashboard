@@ -1,24 +1,31 @@
-/*All fonts links*/
+/* All font links */
+
 @font-face {
-  font-family: regular;
-  src: url(./assets/fonts/Inter-Regular.otf);
+  font-family: "Inter-Regular";
+  src: url("./assets/fonts/Inter-Regular.otf") format("opentype");
 }
+
 @font-face {
-  font-family: medium;
-  src: url(./assets/fonts/Inter-Medium.otf);
+  font-family: "Inter-Medium";
+  src: url("./assets/fonts/Inter-Medium.otf") format("opentype");
 }
+
 @font-face {
-  font-family: semibold;
-  src: url(./assets/fonts/Inter-SemiBold.otf);
+  font-family: "Inter-SemiBold";
+  src: url("./assets/fonts/Inter-SemiBold.otf") format("opentype");
 }
+
 @font-face {
-  font-family: bold;
-  src: url(./assets/fonts/Inter-Bold.otf);
+  font-family: "Inter-Bold";
+  src: url("./assets/fonts/Inter-Bold.otf") format("opentype");
 }
+
 @font-face {
-  font-family: extrabold;
-  src: url(./assets/fonts/Inter-ExtraBold.otf);
+  font-family: "Inter-ExtraBold";
+  src: url("./assets/fonts/Inter-ExtraBold.otf") format("opentype");
 }
+
+/* Font variables */
 $regular: "Inter-Regular", sans-serif;
 $medium: "Inter-Medium", sans-serif;
 $semibold: "Inter-SemiBold", sans-serif;

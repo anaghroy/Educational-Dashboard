@@ -1,7 +1,14 @@
-import { Plus } from "lucide-react";
+
 import design from "../assets/images/Design ux.jpg";
+
 import PlayCard from "./PlayCard";
 import Calendar from "./Calendar";
+import Video from "./Video"
+
+import ProgressItem from "./ProgressItem";
+import { data } from "../Data/ProgressData";
+import { button } from "../Data/ButtonCard";
+import { Plus } from "lucide-react";
 const Dashboard = () => {
   return (
     <section className="dashboard">
@@ -34,18 +41,22 @@ const Dashboard = () => {
               <span>Craig Young</span>
             </div>
             <div className="time">
-              
               <PlayCard />
             </div>
           </div>
         </div>
 
         <div className="card calendar">
-          <Calendar/>
+          <Calendar />
         </div>
 
-        <div className="card video">Essentials for Designers</div>
-        <div className="card progress">Progress</div>
+        <div className="card video">
+          <Video button={button}/>
+        </div>
+
+        <div className="card progress">
+          <ProgressItem data={data} />
+        </div>
         <div className="card tasks">Tasks Board</div>
       </div>
     </section>
